@@ -1,3 +1,15 @@
+import requests
+from os.path import getsize
+import json
+
+#CONSTANTS
+OAUTH_VK_URL = 'https://oauth.vk.com/authorize'
+# APP_ID = 7533990  #получен СОИ по ссылке https://vk.com/editapp?act=create
+TOKEN_VK = '958eb5d439726565e9333aa30e50e0f937ee432e927f0dbd541c541887d919a7c56f95c04217915c32008'  # получен в Нетологии
+######!!!!!!!!!!!!!!!!!!!!!!!
+
+id_VK = 552934290  # id_korovin
+
 class VKUser:
     def __init__(self, token: str, user_id: int, params=None, headers=None):
         self.token_VK = token

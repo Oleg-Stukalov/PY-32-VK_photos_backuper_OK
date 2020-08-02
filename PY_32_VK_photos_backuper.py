@@ -1,13 +1,5 @@
-import json
-from pprint import pprint
-import requests
-import os
-from os.path import getsize, join
-import pathlib
-from tqdm import tqdm
-import time
-from PY_32_VK_photos_backuper_VK_interface import get_params, get_request, put_request, get_photos
-from PY_32_VK_photos_backuper_YD_interface import put_request, yandex_folder, yandex_upload
+from PY_32_VK_photos_backuper_VK_interface import VKUser
+from PY_32_VK_photos_backuper_YD_interface import YDUser
 
 #CONSTANTS
 OAUTH_VK_URL = 'https://oauth.vk.com/authorize'
