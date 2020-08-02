@@ -6,10 +6,10 @@ from os.path import getsize, join
 import pathlib
 from tqdm import tqdm
 import time
-from file PY-32-VK-photos-backuper-VK-interface import *
-from file PY-32-VK-photos-backuper-YD-interface import *
+from PY_32_VK_photos_backuper_VK_interface import get_params, get_request, put_request, get_photos
+from PY_32_VK_photos_backuper_YD_interface import put_request, yandex_folder, yandex_upload
 
-
+#CONSTANTS
 OAUTH_VK_URL = 'https://oauth.vk.com/authorize'
 YD_URL = 'https://cloud-api.yandex.net:443/v1/disk'
 YANDEX_UPLOAD_URL = 'https://cloud-api.yandex.net/v1/disk/resources/upload'
