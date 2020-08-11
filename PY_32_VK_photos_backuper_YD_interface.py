@@ -5,8 +5,6 @@ import time
 #CONSTANTS
 YD_URL = 'https://cloud-api.yandex.net:443/v1/disk'
 YANDEX_UPLOAD_URL = 'https://cloud-api.yandex.net/v1/disk/resources/upload'
-######!!!!!!!!!!!!!!!!!!!!!!!
-#TOKEN_YD = 'AgAAAAAy_UpkAADLW4DINWqLNUrUml_SsYrvX7U'
 TOKEN_YD = input('Пожалуйста, введите токен учетной записи Яндекс, куда будем сохранять копию фото: ')
 YD_OAUTH = {'Authorization': f'OAuth {TOKEN_YD}'}
 yandex_oauth_header = {
@@ -14,16 +12,13 @@ yandex_oauth_header = {
     'Authorization': f'OAuth {TOKEN_YD}'
 }
 print('Сохранен токен Яндекс: ', TOKEN_YD)
-
 id_VK = 552934290  # id_korovin
 
-###########Yandex class
+
 class YDUser:
-    # def __init__(self, token: str, user_id: int, params=None, headers=None):
-    #     self.token_VK = token
-    #     self.user_id = user_id
-    #     self.params = params
-    #     self.headers = headers
+    """
+    YDUser is a class that do all work with Yandex API
+    """
 
     def put_request(self, url, params, headers):
         response = requests.put(url, params=params, headers=headers)
